@@ -109,9 +109,9 @@ button:hover{
 
 .header{
     background:#fff;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    padding:20px 30px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
 
     display:flex;
     justify-content:space-between;
@@ -123,9 +123,17 @@ button:hover{
     font-size:28px;
 }
 
-.header div{
+.header-buttons{
     display:flex;
-    gap:10px;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.header-buttons button{
+    width:auto;
+    min-width:120px;
+    padding:10px 18px;
 }
 
 .header button{
@@ -145,6 +153,12 @@ button:hover{
     border-radius:12px;
     padding:20px;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .card h2{
@@ -165,6 +179,11 @@ button:hover{
     padding:25px;
     border-radius:12px;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.form-box:hover{
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
 }
 
 .form-box h2{
@@ -253,10 +272,9 @@ table button:hover{
     text-align:center;
 }
 
-.header div{
+.header-buttons{
     width:100%;
     justify-content:center;
-    flex-wrap:wrap;
 }
 
 .cards{
@@ -288,4 +306,89 @@ button{
     font-size:15px;
 }
 
+}
+
+/* ==========================
+   Dark Theme
+========================== */
+
+body.dark{
+    background:#111827;
+    color:#ffffff;
+    transition:.3s;
+}
+
+body.dark .container,
+body.dark .header,
+body.dark .card,
+body.dark .form-box{
+    background:#1f2937;
+    color:#ffffff;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark label,
+body.dark .title{
+    color:#ffffff;
+}
+
+body.dark .card h2{
+    color:#d1d5db;
+}
+
+body.dark .card p{
+    color:#38bdf8;
+}
+
+body.dark input,
+body.dark select{
+    background:#374151;
+    color:#ffffff;
+    border:1px solid #4b5563;
+}
+
+body.dark input::placeholder{
+    color:#d1d5db;
+}
+
+body.dark table{
+    color:#ffffff;
+}
+
+body.dark table th{
+    background:#2563eb;
+}
+
+body.dark table td{
+    background:#1f2937;
+    border-color:#374151;
+}
+
+body.dark table tr:nth-child(even) td{
+    background:#273449;
+}
+
+body.dark table tr:hover td{
+    background:#334155;
+}
+
+body.dark button{
+    background:#2563eb;
+}
+
+body.dark button:hover{
+    background:#1d4ed8;
+}
+
+body,
+.card,
+.form-box,
+.header,
+button,
+input,
+select,
+table,
+.container{
+    transition:.3s ease;
 }

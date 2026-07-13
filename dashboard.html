@@ -21,9 +21,13 @@
 
             <h1>💰 Expense Tracker Dashboard</h1>
 
-            <div style="display:flex; gap:10px;">
+            <div class="header-buttons">
 
-                <button onclick="location.href='profile.html'">
+                <button id="themeBtn">
+                    🌙 Dark Mode
+                </button>
+
+                <button onclick="window.location.href='profile.html'">
                     Profile
                 </button>
 
@@ -88,11 +92,9 @@
                 </div>
 
                 <div class="input-group">
-
                     <label>Category</label>
 
                     <select id="category">
-
                         <option>Food</option>
                         <option>Shopping</option>
                         <option>Bills</option>
@@ -101,33 +103,26 @@
                         <option>Education</option>
                         <option>Entertainment</option>
                         <option>Others</option>
-
                     </select>
 
                 </div>
 
                 <div class="input-group">
-
                     <label>Type</label>
 
                     <select id="type">
-
                         <option>Income</option>
                         <option>Expense</option>
-
                     </select>
 
                 </div>
 
                 <div class="input-group">
-
                     <label>Date</label>
-
                     <input
                         type="date"
                         id="date"
                         required>
-
                 </div>
 
                 <button type="submit">
@@ -147,9 +142,11 @@
             <input
                 type="text"
                 id="search"
-                placeholder="Search by Title">
+                placeholder="Search by title">
 
             <br><br>
+
+            <label>Filter by Category</label>
 
             <select id="filterCategory">
 
@@ -179,21 +176,19 @@
                 <thead>
 
                     <tr>
-
                         <th>Title</th>
                         <th>Amount</th>
                         <th>Category</th>
                         <th>Type</th>
                         <th>Date</th>
                         <th>Action</th>
-
                     </tr>
 
                 </thead>
 
                 <tbody id="transactionTable">
 
-                    <!-- Transactions appear here -->
+                    <!-- JavaScript inserts rows here -->
 
                 </tbody>
 
